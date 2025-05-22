@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+/* css guide
+    1. General Styles
+    2. Hero Section
+    3. Animations for Hero Section
+    4. Styling for SVG containers
+    5. Specific Animations for each SVG on hover
+      - Blue Raspberry
+      - Cherry
+      - Grape
+      - Lemon-Lime
+      - Orange
+      - Strawberry
+    6. Footer Styling
+*/
+
+/* General Styles */
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #4A00B0 #f0f0f0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+
+.hero {
+  background: linear-gradient(135deg, #6A0DAD, #4A00B0);
+  color: #f9f9f9;
+  padding: 16px;
+  padding-bottom: 64px;
+  padding-top: -24px;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  margin-bottom: 32px;
+  box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 56px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease-out;
+  text-decoration: 2px underline;
+  text-underline-offset: 8px;
+}
+
+.hero p {
+  display: inline;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+  opacity: 0;
+} 
+
+/* Animations for Hero Section */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styling for SVG containers */
+
+.icon-wrapper {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  border: 0;
+  padding: 24px;
+  margin: 16px 0px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.icon-wrapper:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.icon-wrapper object {
+  width: 100%;
+  height: 300px;
+  display: block;
+  transition: filter 0.4s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Specific Animations for each SVG on hover */
+
+/* Blue Raspberry */
+
+#blue-raspberry object:hover {
+  transform: scale(1.15) rotate(8deg);
+  filter: drop-shadow(0 0 20px #9370DB);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Cherry */
+
+#cherry object:hover {
+  transform: translateY(-15px) rotate(-10deg);
+  filter: drop-shadow(0 0 20px #DC143C);
+}
+
+/* Grape */
+
+#grape object:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 20px #6A0DAD);
+  animation: slow-spin 20s linear infinite;
+}
+
+@keyframes slow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Lemon-Lime */
+
+#lemon-lime object:hover {
+  transform: scale(1.2) translateX(8px);
+  filter: drop-shadow(0 0 20px #32CD32);
+  animation: swing 4s ease-in-out infinite;
+}
+
+@keyframes swing {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+/* Orange */
+
+#orange object:hover {
+  transform: scale(1.12) translateY(-8px) rotate(3deg);
+  filter: drop-shadow(0 0 20px #FF8C00);
+}
+
+/* Strawberry */
+
+#strawberry object:hover {
+  transform: scale(1.1) rotate(-5deg);
+  filter: drop-shadow(0 0 20px #FF69B4);
+}
+
+
+/* Footer Styling */
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #4A00B0;
+  color: #f9f9f9;
+  text-align: center;
+  padding: 12px 16px;
+  margin-top: 48px;
+  font-size: 14px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
