@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive SVG Icons</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    
+  <header>
+    <h1 class="hidden">Burple</h1>
+  </header>
+  <main>
+    <section class="hero">
+      <h2>Burple</h2>
+      <p>
+        Burple is a splash of fruity fun created just for kids! Bursting with bold flavors, bright colors,
+        and a bubbly personality, Burple is more than a drink—it's an adventure in every bottle. Whether
+        it's a school lunchbox surprise or a summer playdate treat, Burple brings smiles, energy, and a
+        big burst of fruit-powered joy.
+      </p>
+    </section>
+    <section class="grid-con" id="clickable-icons">
+      <h2 class="hidden">Our Flavors..</h2>
+      <button class="col-span-4 m-col-span-6 l-col-span-4 xl-col-span-4 icon-wrapper" id="blue-raspberry">
+        <object data="images/Blue_Raspberry.svg" type="image/svg+xml"></object>
+      </button>
+      <button class="col-span-4 m-col-span-6 l-col-span-4 xl-col-span-4 icon-wrapper" id="cherry">
+        <object data="images/Cherry.svg" type="image/svg+xml"></object>
+      </button>
+      <button class="col-span-4 m-col-span-6 l-col-span-4 xl-col-span-4 icon-wrapper" id="grape">
+        <object data="images/Grape.svg" type="image/svg+xml"></object>
+      </button>
+      <button class="col-span-4 m-col-span-6 l-col-span-4 xl-col-span-4 icon-wrapper" id="lemon-lime">
+        <object data="images/Lemon-Lime.svg" type="image/svg+xml"></object>
+      </button>
+      <button class="col-span-4 m-col-span-6 l-col-span-4 xl-col-span-4 icon-wrapper" id="orange">
+        <object data="images/Orange.svg" type="image/svg+xml"></object>
+      </button>
+      <button class="col-span-4 m-col-span-6 l-col-span-4 xl-col-span-4 icon-wrapper" id="strawberry">
+        <object data="images/strawberry.svg" type="image/svg+xml"></object>
+      </button>
+    </section>
+  </main>
+  <footer>
+    <p>
+      &copy; 2025 Burple Drinks Co. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
