@@ -18,6 +18,14 @@
     to { opacity: 0.3; }
   }
 </style>
+<script type="text/javascript">
+  let theOrange = document.querySelector("#orange");
+  function logMyId() {
+    console.log('You clicked on: ' + this.id);
+  }
+
+  theOrange.addEventListener("click", logMyId);
+</script>
 </defs>
 
   <g id="orange_inside">
