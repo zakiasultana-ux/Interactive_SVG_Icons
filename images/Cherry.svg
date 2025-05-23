@@ -5,14 +5,22 @@
 <style>
 #cherry_outside{
   transform-box: fill-box;
-    transform-origin: top center;
-    transition: all 0.5s ease-in-out;
+  transform-origin: top center;
+  transition: all 0.5s ease-in-out;
 }
 
  #cherry:hover #cherry_outside{
   transform: translateX(-60px);
   }
 </style>
+<script type="text/javascript">
+  let theCherries = document.querySelector("#cherry");
+  function logMyId() {
+    console.log('You clicked on: ' + this.id);
+  }
+
+  theCherries.addEventListener("click", logMyId);
+</script>
 </defs>
 
   <g id="cherry_inside">
